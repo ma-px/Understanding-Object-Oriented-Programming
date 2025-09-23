@@ -9,7 +9,7 @@ This book is about the Object-Oriented Programming paradigm. It explains OOP con
 * Chapter 2: Class: a factory for objects
 * Chapter 3: Encapsulation: hidden from the outside world
 * Chapter 4: Abstraction: a simplified view
-* Chapter 5: Inheritance: reusing implementation
+* Chapter 5: Inheritance: reusablility
 * Chapter 6: Polymorphism: reusing interfaces
 * Chapter 7: Composition: objects made of objects
 
