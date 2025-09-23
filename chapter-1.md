@@ -358,7 +358,7 @@ fontSize = 11
 smallFontSize = fontSize
 ```
 
-Because numbers are value types, assigning fontSize to smallFontSize creates a copy of the value 11.
+Because numbers are value types, assigning `fontSize` to `smallFontSize` creates a copy of the value 11.
 
 <figure>
     <img src="assets/chapter-1/fig5.png" width="650" alt="Assigning a Value Type to Another Variable" align="center">
