@@ -4,8 +4,9 @@ This book is about the Object-Oriented Programming paradigm. It explains OOP con
 
 ### Table of Contents
 
-* Chapter 1: Objects: united data and operations
-* Chapter 2: Classes: a factory for objects
+* Chapter 1: [Preface](preface.md)
+* Chapter 1: [Objects: united data and operations](chapter-1.md)
+* Chapter 2: Class: a factory for objects
 * Chapter 3: Encapsulation: hidden from the outside world
 * Chapter 4: Abstraction: a simplified view
 * Chapter 5: Inheritance: reusing implementation
