@@ -57,8 +57,8 @@ OOP solves this by putting data and the functions that work with it into self-co
 In other words, “grouping data and functions”  essentially means creating a dedicated, scoped-like environment for them, one that is isolated from the outer scope.
 
 <figure>
-    <img src="assets/chapter-1/fig2.png" width="650" alt="Objects in global scope" align="center">
-    <figcaption><em>Fig. 2: Objects in global scope</em></figcaption>
+    <img src="assets/chapter-1/fig2.png" width="650" alt="Objects in the Global Scope" align="center">
+    <figcaption><em>Fig. 2: Objects in the Global Scope</em></figcaption>
     <br><br>
 </figure>
 
