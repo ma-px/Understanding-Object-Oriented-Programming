@@ -1,6 +1,6 @@
 # Understanding Object-Oriented Programming
 
-This book is about the Object-Oriented Programming paradigm. It explains OOP concepts in a way that sticks, helping you not only understand them but also learn to *think* in OOP.
+This book introduces the Object-Oriented Programming paradigm in a practical, easy-to-grasp way. It’s not just about definitions, it’s about building the mindset to think in OOP, so the concepts truly stay with you.
 
 ### Table of Contents
 
