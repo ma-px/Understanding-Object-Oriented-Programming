@@ -52,9 +52,9 @@ In procedural programming, data and the functions that act on it are separated. 
 
 For example, some data might be used by one set of functions, while a different set uses other data. Yet, because they all live in the same global scope, conflicts and unintended interactions are common.
 
-OOP solves this by putting data and the functions that work with it into self-contained units called objects. Each object creates a scoped-like environment for both its data and its functions. As a result, the data and methods are no longer part of the global or outer scope and cannot be accessed directly from the outer scope. This prevents them from polluting the global scope and eliminates many of the problems caused by a shared global state.
+OOP solves this by putting data and the functions that work with it into self-contained units called objects. Each object creates a scope-like environment for both its data and its functions. As a result, the data and methods are no longer part of the global or outer scope and cannot be accessed directly from the outer scope. This prevents them from polluting the global scope and eliminates many of the problems caused by a shared global state.
 
-In other words, “grouping data and functions”  essentially means creating a dedicated, scoped-like environment for them, one that is isolated from the outer scope.
+In other words, “grouping data and functions”  essentially means creating a dedicated, scope-like environment for them, one that is isolated from the outer scope.
 
 <figure>
     <img src="assets/chapter-1/fig2.png" width="650" alt="Objects in the Global Scope" align="center">
@@ -62,7 +62,7 @@ In other words, “grouping data and functions”  essentially means creating a 
     <br><br>
 </figure>
 
-This ability to create an isolated, scoped-like environment for data that must persist beyond a single function call is the fundamental concept of OOP. By keeping related data and behavior together, objects become both non-global and self-contained units, which provide stronger modularity and reduce accidental interference between different parts of a program.
+This ability to create an isolated, scope-like environment for data that must persist beyond a single function call is the fundamental concept of OOP. By keeping related data and behavior together, objects become both non-global and self-contained units, which provide stronger modularity and reduce accidental interference between different parts of a program.
 
 The data and functions inside an object don’t pollute outer scopes because they cannot be accessed directly; they are only accessible through a reference to the object.
 
@@ -125,8 +125,8 @@ Another important thing to notice is that in this example, there is only one ref
 In real-world object-oriented programs, most objects are not stored directly in the global scope. Instead, they are referenced by other objects, forming a network of interconnected objects. The global scope usually contains only a handful of top-level references (sometimes just a single entry point). This design almost eliminates the widespread use of global data that procedural programming often suffers from, making large systems easier to structure and maintain.
 
 <figure>
-    <img src="assets/chapter-1/fig3.png" width="650" alt="Objects create their own scoped-like environments" align="center">
-    <figcaption><em>Fig. 3: Objects create their own scoped-like environments</em></figcaption>
+    <img src="assets/chapter-1/fig3.png" width="650" alt="Objects create their own scope-like environments" align="center">
+    <figcaption><em>Fig. 3: Objects create their own scope-like environments</em></figcaption>
     <br><br>
 </figure>
 
