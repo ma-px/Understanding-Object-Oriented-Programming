@@ -601,7 +601,7 @@ I only created one object and left the other functions as they were. The reason 
 
 This also highlights an important point: you don’t have to force everything into objects. Not every piece of code needs to be object-oriented. That’s one of the reasons I personally prefer languages that let you mix paradigms, whether procedural, object-oriented, or even functional if available. Having that flexibility means you can pick the style that feels right for the job instead of twisting your program to fit a single rigid approach. 
 
-You might also notice that the fileUploader object doesn’t map directly to a real-world object; you won’t find a “file uploader” lying around in the real world. And that’s perfectly fine. Not all objects in a program need to represent something real; many objects exist purely in the computer world.
+You might also notice that the `fileUploader` object doesn’t map directly to a real-world object; you won’t find a “file uploader” lying around in the real world. And that’s perfectly fine. Not all objects in a program need to represent something real; many objects exist purely in the computer world.
 
 ## Summary
 
