@@ -1,4 +1,4 @@
-# Objects: united data and operations
+# Objects: United Data and Operations
 
 Programmers use different methods to write software. These methods, known as programming paradigms, define various ways of thinking about problems and organizing solutions in code.
 
@@ -675,7 +675,7 @@ counter = 0
 
 while (counter < 10) {
     // code
-    
+
     counter++
 }
 ```
