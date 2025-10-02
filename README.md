@@ -2,6 +2,9 @@
 
 This book introduces the Object-Oriented Programming paradigm in a practical, easy-to-grasp way. It’s not just about definitions, it’s about building the mindset to think in OOP, so the concepts truly stay with you.
 
+<a href="https://understandingoop.com/"><img src="assets/cover.png" width="300" alt="Book Cover" align="center"></a>
+<br>
+
 My goal is to teach OOP from the ground up. I want you to feel as though you are discovering OOP yourself, step by step. I believe OOP should be taught this way, because true understanding comes when you see not just how it works but also why. With this foundation, you’ll be able to make better decisions about which techniques to apply in different situations. It also makes advanced topics, like design patterns, far easier to grasp. Even if you are already a professional programmer, you’ll find parts of this book that challenge your assumptions and deepen your understanding.
 
 A second goal of this book is to clear away the misinformation that surrounds OOP. Over the years, important concepts have often been explained poorly or even taught incorrectly, which has made learning OOP more difficult than it needs to be. I aim to provide you with a clear, practical path to understanding OOP the way it was meant to be understood.
