@@ -613,6 +613,159 @@ Objects are reference types, meaning multiple variables can point to the same ob
 
 Object-oriented programming is a paradigm that uses objects to model solutions, relying on four primary principles: encapsulation, abstraction, inheritance, and polymorphism.
 
-## Exercises  *(TODO)*
+## Exercises
 
-<!-- TODO: Add exercises for this chapter -->
+### A String Object
+
+Here are simplified versions of two utility functions. They each take a string as input and return a new version of that string, either in uppercase or lowercase.
+
+```
+function uppercase(str) {
+    newStr = ""
+    length = getStringLength(str)
+    for (i = 0; i < length; i++) {
+        character = getCharacterAt(str, i)
+        asciiValue = getASCIIValue(character)
+        if (asciiValue >= 97 and asciiValue <= 122) {
+            uppercaseASCII = asciiValue - 32
+            uppercaseChar = getCharacterFromASCII(uppercaseASCII)
+            newStr = newStr + uppercaseChar
+        } else {
+            newStr = newStr + character
+        }
+    }
+    return newStr
+}
+
+function lowercase(str) {
+    newStr = ""
+    length = getStringLength(str)
+    for (i = 0; i < length; i++) {
+        character = getCharacterAt(str, i)
+        asciiValue = getASCIIValue(character)
+        if (asciiValue >= 65 and asciiValue <= 90) {
+            lowercaseASCII = asciiValue + 32
+            lowercaseChar = getCharacterFromASCII(lowercaseASCII)
+            newStr = newStr + lowercaseChar
+        } else {
+            newStr = newStr + character
+        }
+    }
+    return newStr
+}
+```
+
+Suppose we want to make the string `"Just Do It!"` uppercase and lowercase. Using these functions, we would write something like this:
+
+```
+slogan = "Just Do It!"
+
+upperSlogan = uppercase(slogan)
+lowerSlogan = lowercase(slogan)
+```
+
+Now, here’s your exercise: create an object that represents the string and includes these two functions. The object should be simple; it only needs to return the transformed strings when the methods are called. Think about how you can group the string data with the functions that operate on it, so that calling a method on the object produces the uppercase or lowercase version of the string.
+
+### A Counter Object
+
+Consider the following loop:
+
+```
+counter = 0
+
+while (counter < 10) {
+    // code
+    
+    counter++
+}
+```
+
+In this example, several operations are performed on the `counter` variable. Your task is to create an object for the counter. The object should be kept as simple as possible, containing only what is necessary to manage the counter.
+
+### An Array Object
+Arrays are a fundamental data structure in many programming languages. Consider some of the functions that operate on an array:
+
+```
+colors = ['red', 'green', 'blue', 'yellow', 'purple']
+
+count(colors)           // count the elements in the array
+inArray(colors, 'red')  // check if an element exists in the array
+addToArray(colors, 'white')  // add an item to the array
+removeFromArray(colors, 'blue')  // remove an item from the array
+```
+
+Your task is to create a `colors` array object that can perform all these operations on the array. The object should provide methods to count elements, check for the existence of an item, add a new item, and remove an item, keeping everything organized in one self-contained unit.
+
+### A Text File Object
+
+Here is a simple text file object that groups a file’s related data and operations. Your task is to break down this object and rewrite it using a procedural programming style, keeping the same functionality but without using objects.
+
+```
+textFile = {
+    filename = ""
+    content = ""
+    exists = false
+    error = ""
+   
+    function load(filepath) {
+        filename = filepath
+        error = ""
+       
+        // Check if file exists using low-level OS function
+        exists = fileExists(filename)
+       
+        if (!exists) {
+            error = "File does not exist - " + filename
+            return false
+        }
+       
+        // Read all content using low-level file operations
+        content = readAllText(filename)
+       
+        if (content == null) {
+            error = "Could not read file - " + filename
+            return false
+        }
+       
+        return true
+    }
+   
+    function getContent() {
+        if (!exists) {
+            return ""
+        }
+        return content
+    }
+   
+    function checkExists() {
+        return exists
+    }
+   
+    function getFilename() {
+        return filename
+    }
+   
+    function getSize() {
+        if (!exists) {
+            return 0
+        }
+        return getStringLength(content)
+    }
+   
+    function getError() {
+        return error
+    }
+}
+
+// Usage
+success = textFile.load("example.txt")
+if (success) {
+    fileContent = textFile.getContent()
+    show("File content: " + fileContent)
+    show("File size: " + textFile.getSize() + " characters")
+} else {
+    show("Error: " + textFile.getError())
+}
+```
+
+The `load` function is responsible for initializing the object with the filename and content. It uses low-level file functions to load the file, check if it exists, and read its contents. The object provides methods for accessing its content as well as other metadata, such as the file size, filename, existence status, and any error messages.
