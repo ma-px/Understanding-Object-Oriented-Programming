@@ -9,7 +9,7 @@ My goal is to teach OOP from the ground up. I want you to feel as though you are
 
 A second goal of this book is to clear away the misinformation that surrounds OOP. Over the years, important concepts have often been explained poorly or even taught incorrectly, which has made learning OOP more difficult than it needs to be. I aim to provide you with a clear, practical path to understanding OOP the way it was meant to be understood.
 
-### Table of Contents
+## Table of Contents
 
 * Chapter 1: [Preface](preface.md)  
 * Chapter 1: [Objects: United Data and Operations](chapter-1.md)  
@@ -20,7 +20,7 @@ A second goal of this book is to clear away the misinformation that surrounds OO
 * Chapter 6: Polymorphism: Reusing Interfaces  
 * Chapter 7: Composition: Objects Made of Objects  
 
-# Contributing
+## Contributing
 
 Contributions are welcome! If you’d like to improve code snippets, clarify explanations, or enhance the content in any way, please submit a pull request (PR).
 
