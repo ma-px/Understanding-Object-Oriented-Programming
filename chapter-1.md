@@ -70,7 +70,7 @@ So, how does an object look in code? Here are some examples:
 
 A `weather` object:
 
-```
+```text
 weather = {
 
     temperature = 72
@@ -108,7 +108,7 @@ The variable `weather` holds a reference to the object. Its name reflects what t
 
 How do we use this object? Let’s find out:
 
-```
+```text
 tempratureLevel = weather.temperatureLevel()
 weatherDescription = weather.describe()
 
@@ -132,7 +132,7 @@ In real-world object-oriented programs, most objects are not stored directly in 
 
 So how would this program look if we didn’t use objects? Let’s see a purely procedural version.
 
-```
+```text
 // global data
 temperature = 72
 condition = "sunny"
@@ -164,7 +164,7 @@ In this version, both the data (`temperature`, `condition`) and the functions (`
 
 We can make the functions more reusable by passing in values instead of relying on global state:
 
-```
+```text
 // global functions
 function temperatureLevel(temperature) {
     if (temperature < 50)
@@ -201,7 +201,7 @@ In the first example, the functions (methods) only read the data inside the `wea
 
 A todo task object:
 
-```
+```text
 // an object representing a single task
 task = {
     title = "Buy groceries"
@@ -224,13 +224,13 @@ task = {
 
 taskDescription = task.describe()
 
-show(taskDescription)	// Buy groceries | Completed: No
+show(taskDescription)    // Buy groceries | Completed: No
 
-task.complete() // this method call modifies the object's data
+task.complete()    // this method call modifies the object's data
 
 taskDescription = task.describe()
 
-show(taskDescription)	// Buy groceries | Completed: Yes
+show(taskDescription)    // Buy groceries | Completed: Yes
 ```
 
 In this `task` object, the `describe()` method simply reads the data. It looks at the `title` field and the `completed` field, then returns a string with that information. On the other hand, the `complete()` method actually changes the object’s state, it sets the `completed` field to `true`.
@@ -245,7 +245,7 @@ This is a fundamental question. A program is really just two things: data and op
 
 You have a number (data), and you can negate it (operation). That makes an object:
 
-```
+```text
 number = {
     value = 10
 
@@ -257,7 +257,7 @@ number = {
 
 You have the radius of a circle (data), and you can draw it on screen (operation). That makes an object:
 
-```
+```text
 circle = {
     radius = 5
 
@@ -269,7 +269,7 @@ circle = {
 
 You have the URL of a website (data), and you can make a request (operation). That makes an object:
 
-```
+```text
 request = {
     url = "https://example.com"
    
@@ -282,7 +282,7 @@ request = {
 
 You have a list of people’s names (data), and you can add a name to it (operation). That makes an object:
 
-```
+```text
 namesList {
     names = []
 
@@ -295,7 +295,7 @@ namesList {
 
 You have a Light Emitting Diode (LED) with a memory-mapped I/O address as its data, and you can toggle the LED on or off as its operation. Together, that makes an object.
 
-```
+```text
 ledLight = {
     memoryAddress = 0x40001000  // Memory-mapped I/O address for 
                                 // the led light hardware
@@ -337,7 +337,7 @@ Objects are first-class citizens in a program, which means you can store them in
 
 In many programming languages, depending on the type of data, a variable can either store the data value directly or store a reference to the data. Data that is stored directly in the variable is called a value type, while data that is stored by reference is called a reference type. A reference type means that the actual data exists somewhere else in memory, and the variable only holds the address pointing to that data. For example, in many languages, numbers are value types, while data structures like arrays are reference types. Consider the following code:
 
-```
+```text
 fontSize = 11
 
 luckyNumbers = [3, 7, 11, 21, 42, 8, 13]
@@ -353,7 +353,7 @@ Here, `fontSize` stores the number 11 directly. On the other hand, `luckyNumbers
 
 This distinction becomes important when you assign one variable to another. For value types, the actual value is copied. For example:
 
-```
+```text
 fontSize = 11
 smallFontSize = fontSize
 ```
@@ -368,7 +368,7 @@ Because numbers are value types, assigning `fontSize` to `smallFontSize` creates
 
 Modifying `smallFontSize` later does not affect `fontSize`:
 
-```
+```text
 smallFontSize = 8
 
 show(fontSize) // Output: 11
@@ -376,7 +376,7 @@ show(fontSize) // Output: 11
 
 In contrast, for reference types like arrays, assigning one variable to another copies the reference, not the data itself:
 
-```
+```text
 luckyNumbers = [3, 7, 11, 21, 42, 8, 13]
 
 specialNumbers = luckyNumbers
@@ -392,7 +392,7 @@ Here, the array itself is not duplicated. Both `luckyNumbers` and `specialNumber
 
 If you modify a reference type, the changes are visible through all variables that reference the same data. For example:
 
-```
+```text
 luckyNumbers[0] = 5
 
 show(specialNumbers[0]) // Output: 5
@@ -412,7 +412,7 @@ In almost all object-oriented programming languages, objects are stored as refer
 
 Let’s look at an example:
 
-```
+```text
 counter = {
     value = 0
 
@@ -493,7 +493,7 @@ If you are new to OOP, many parts of this definition may feel unfamiliar. Don’
 
 Before we finish this chapter, let’s refactor a piece of procedural code. The following example shows how a PNG image might be uploaded to a server. To keep the example simple, we’ll assume that a connection to the server is already established. Note that this code is not production-ready and leaves out many important details, but it’s sufficient to illustrate the concepts.
 
-```
+```text
 /* helpers (stubs) */
 function show(msg) { /* display message */ }
 function showProgress(ratio) { /* update UI */ }
@@ -538,7 +538,7 @@ Looking at this code, you can see it is doing two things: uploading the file and
 
 Instead of leaving all this data and behavior (operations) scattered in procedural code, we can group them into an object. This object handles everything needed to upload a file, and we will call it `fileUploader`. Here is how the refactored version looks:
 
-```
+```text
 /* helpers (stubs) */
 function show(msg) { /* display message */ }
 function showProgress(ratio) { /* update UI */ }
@@ -619,7 +619,7 @@ Object-oriented programming is a paradigm that uses objects to model solutions, 
 
 Here are simplified versions of two utility functions. They each take a string as input and return a new version of that string, either in uppercase or lowercase.
 
-```
+```text
 function uppercase(str) {
     newStr = ""
     length = getStringLength(str)
@@ -657,7 +657,7 @@ function lowercase(str) {
 
 Suppose we want to make the string `"Just Do It!"` uppercase and lowercase. Using these functions, we would write something like this:
 
-```
+```text
 slogan = "Just Do It!"
 
 upperSlogan = uppercase(slogan)
@@ -670,7 +670,7 @@ Now, here’s your exercise: create an object that represents the string and inc
 
 Consider the following loop:
 
-```
+```text
 counter = 0
 
 while (counter < 10) {
@@ -683,9 +683,10 @@ while (counter < 10) {
 In this example, several operations are performed on the `counter` variable. Your task is to create an object for the counter. The object should be kept as simple as possible, containing only what is necessary to manage the counter.
 
 ### An Array Object
+
 Arrays are a fundamental data structure in many programming languages. Consider some of the functions that operate on an array:
 
-```
+```text
 colors = ['red', 'green', 'blue', 'yellow', 'purple']
 
 count(colors)           // count the elements in the array
@@ -700,7 +701,7 @@ Your task is to create a `colors` array object that can perform all these operat
 
 Here is a simple text file object that groups a file’s related data and operations. Your task is to break down this object and rewrite it using a procedural programming style, keeping the same functionality but without using objects.
 
-```
+```text
 textFile = {
     filename = ""
     content = ""
